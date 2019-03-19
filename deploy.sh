@@ -1,6 +1,6 @@
-docker build -t venkyprabhu/multi-client:latest -t venkyprabhu/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t venkyprabhu/multi-server:latest -t venkyprabhu/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t venkyprabhu/multi-worker:latest -t venkyprabhu/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t venkyprabhu/multi-client:latest -t venkyprabhu/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t venkyprabhu/multi-server:latest -t venkyprabhu/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t venkyprabhu/multi-worker:latest -t venkyprabhu/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push venkyprabhu/multi-client:latest
 docker push venkyprabhu/multi-server:latest
 docker push venkyprabhu/multi-worker:latest
